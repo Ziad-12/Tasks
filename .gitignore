@@ -9,4 +9,7 @@
         .ssh/
         .sudo_as_admin_successful
         .viminfo
+         .ansible/tmp/ansible-local-2163hgpwg5q2/ansiballz_cache/
+        .cache/
+        .bash_logout
   
