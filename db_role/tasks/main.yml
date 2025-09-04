@@ -1,0 +1,23 @@
+---
+# tasks file for db_role 
+#
+- name: update pkg
+  apt: 
+    update_cache: yes
+- name: install mysql
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - mysql-server
+    - mysql-client
+    - python3-mysqldb
+
+- name: create new db
+  mysql_db:
+    name: "{{ name_db }}"
+    state: present
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+

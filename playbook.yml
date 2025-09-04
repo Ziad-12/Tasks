@@ -1,0 +1,8 @@
+
+- name: my database app
+  hosts: all
+  become: yes
+  vars_files:
+    - vault.yml
+  roles:
+    - db_role 
